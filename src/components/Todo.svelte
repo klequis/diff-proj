@@ -1,6 +1,5 @@
 <!-- components/Todo.svelte -->
 <script>
-  import { tick } from 'svelte'
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -9,9 +8,9 @@
   export let todo
 
   let editing = false                     // track editing mode
-  let name = todo.name                    // hold the name of the todo being edited
-
   let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save
+
+  let name = todo.name                    // hold the name of the todo being edited
 
   function update(updatedTodo) {
     todo = { ...todo, ...updatedTodo }    // applies modifications to todo
@@ -19,7 +18,7 @@
   }
 
   function onCancel() {
-    name = todo.name                      // restores name to its initial value and
+    name = todo.name                      // restores name to its initial value
     editing = false                       // and exit editing mode
   }
 
@@ -33,7 +32,7 @@
   }
 
   function onEdit() {
-    editButtonPressed = true              // user pressed the Edit button, focus will come back to the Edit button
+    editButtonPressed = true              // when Cancel or Save is pressed, focus should go back to the Edit button
     editing = true                        // enter editing mode
   }
 
@@ -53,8 +52,7 @@
   <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
     <div class="form-group">
       <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
-      <input bind:value={name} use:selectOnFocus use:focusOnInit type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text"
-      />
+      <input bind:value={name} use:selectOnFocus use:focusOnInit type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
     </div>
     <div class="btn-group">
       <button class="btn todo-cancel" on:click={onCancel} type="button">
