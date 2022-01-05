@@ -2,13 +2,13 @@
 
 Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
 
-## 05. Svelte advanced concepts
+## 06. Working with Svelte stores
 
-In the last article we added more features to our To-Do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. Then we will focus on some accessibility issues involving focus management. Finally, we will see how components can also expose methods and variables to access them programmatically.
+In the last article we completed the development of our app, organized it into components, and saw a couple of advanced techniques for dealing with reactivity, working with DOM nodes and exposing components functionality. In this case we will have a look at Svelte stores: a global data repository that holds value and that allows you to subscribe to it and get notified when the value changes. We will also see how to develop our own custom store to persist the todos information to local storage.
 
-You can see the complete content of this article [here](../05-advanced-concepts/Svelte_advanced_concepts.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility).
+You can see the complete content of this article [here](../06-stores/Svelte_stores.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores).
 
-The source code to follow this article is in the `05-advanced-concepts` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2).
+The source code to follow this article is in the `06-stores` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/06-stores svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/d1fa84a5a4494366b179c87395940039?version=3.23.2).
 
 ---
 

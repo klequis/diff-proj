@@ -1,12 +1,17 @@
 <!-- components/Todo.svelte -->
 <script>
+  import { tick } from 'svelte'
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
+
+  import { selectOnFocus } from '../actions.js'
 
   export let todo
 
   let editing = false                     // track editing mode
   let name = todo.name                    // hold the name of the todo being edited
+
+  let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save
 
   function update(updatedTodo) {
     todo = { ...todo, ...updatedTodo }    // applies modifications to todo
@@ -28,12 +33,17 @@
   }
 
   function onEdit() {
+    editButtonPressed = true              // user pressed the Edit button, focus will come back to the Edit button
     editing = true                        // enter editing mode
   }
 
   function onToggle() {
     update({ completed: !todo.completed}) // updates todo status
   }
+
+  const focusOnInit = (node) => node && typeof node.focus === 'function' && node.focus()
+
+  const focusEditButton = (node) => editButtonPressed && node.focus()
 
 </script>
 
@@ -43,7 +53,8 @@
   <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
     <div class="form-group">
       <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
-      <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
+      <input bind:value={name} use:selectOnFocus use:focusOnInit type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text"
+      />
     </div>
     <div class="btn-group">
       <button class="btn todo-cancel" on:click={onCancel} type="button">
@@ -63,7 +74,7 @@
     <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn" on:click={onEdit}>
+    <button type="button" class="btn" on:click={onEdit} use:focusEditButton>
       Edit<span class="visually-hidden"> {todo.name}</span>
     </button>
     <button type="button" class="btn btn__danger" on:click={onRemove}>
