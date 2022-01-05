@@ -2,13 +2,13 @@
 
 Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
 
-## 03. Adding dynamic behavior: working with variables and props
+## 04. Componentizing our Svelte app
 
-Now that we have our markup and styles ready we can start developing the required features for our To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, and mark them as complete. 
+In the last article we started developing our Todo list app. Now it's time to go further and add more features to our app, but the central objective here is to look at how to break our app into manageable components and share information between them.
 
-You can see the complete content of this article [here](../03-adding-dynamic-behavior/Svelte_adding_dynamic_behavior.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props).
+You can see the complete content of this article [here](../04-componentizing-our-app/Svelte_componentizing_our_app.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components).
 
-The source code to follow this article is in the `03-adding-dynamic-behavior` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2).
+The source code to follow this article is in the `04-componentizing-our-app` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app svelte-todo` command. You can also play with an online version using this Svelte [REPL](https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2).
 
 ---
 
