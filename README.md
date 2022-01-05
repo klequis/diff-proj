@@ -2,18 +2,13 @@
 
 Source code of the To-Do list app for the Svelte tutorials at [Understanding client-side JavaScript frameworks](Understanding client-side JavaScript frameworks) series at MDN Web docs.
 
-## 07. TypeScript support in Svelte
+## 08. Deployment and next Steps
 
-In this article will learn how to use TypeScript to develop Svelte applications. First we'll learn what is TypeScript and what benefits it can bring us. Then we'll see how to configure our project to work with TypeScript files. Finally we will go over our app and see what modifications we have to make to fully take advantage of TypeScript features.
+In this article we will learn about a couple of zero-fuss options to deploy our app in production and see how to setup a basic pipeline to deploy our app to GitLab on every commit. We will also provide a list of Svelte resources to go further with your Svelte learning.
 
-You can see the complete content of this article [here](../07-typescript-support/Svelte_typescript_support.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript).
+You can see the complete content of this article [here](../08-next-steps/Svelte_next_steps.md) or at [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next).
 
-The source code to follow this article is in the `07-typescript-support` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo` command. 
-
-The application ported to TypeScript is in the `08-next-steps` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/08-next-steps svelte-todo` command.
-
-> [TypeScript support](https://github.com/sveltejs/svelte-repl/issues/130) is not available from the REPL yet. You can download the content folder and work locally with `npx degit opensas/mdn-svelte-tutorial/07-typescript-support`.
-
+The source code to follow this article is in the `08-next-steps` folder, you can download it with the `npx degit opensas/mdn-svelte-tutorial/08-next-steps svelte-todo` command. 
 ---
 
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*

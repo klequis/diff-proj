@@ -1,9 +1,9 @@
 <!-- App.svelte -->
-<script>
+<script lang="ts">
   import Todos from './components/Todos.svelte'
   import Alert from './components/Alert.svelte'
 
-  import { todos } from './stores.js'
+  import { todos } from './stores'
 </script>
 
 <Alert />

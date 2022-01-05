@@ -1,14 +1,14 @@
 <!-- components/NewTodo.svelte -->
-<script>
+<script lang='ts'>
   import { createEventDispatcher, onMount } from 'svelte'
   const dispatch = createEventDispatcher()
 
-  import { selectOnFocus } from '../actions.js'
+  import { selectOnFocus } from '../actions'
 
-  export let autofocus = false
+  export let autofocus: boolean = false
 
   let name = ''
-  let nameEl                  // reference to the name input DOM node
+  let nameEl: HTMLElement     // reference to the name input DOM node
 
   const addTodo = () => {
     dispatch('addTodo', name)
@@ -21,7 +21,7 @@
     nameEl.focus()            // give focus to the name input
   }
 
-  onMount(() => autofocus && nameEl.focus())    // if autofocus is true, we run nameEl.focus()
+  onMount(() => autofocus && nameEl.focus && nameEl.focus())    // if autofocus is true, we run nameEl.focus()
 
 </script>
 

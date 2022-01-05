@@ -1,11 +1,13 @@
 <!-- components/TodosStatus.svelte -->
-<script>
-  export let todos
+<script lang='ts'>
+  import type { TodoType } from "../types/todo.type"
+
+  export let todos: TodoType[]
 
   $: totalTodos = todos.length
   $: completedTodos = todos.filter(todo => todo.completed).length
 
-  let headingEl
+  let headingEl: HTMLElement
 
   export const focus = () => headingEl.focus()
 
